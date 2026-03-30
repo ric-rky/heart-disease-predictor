@@ -9,8 +9,8 @@ This project trains a machine learning model capable of estimating the probabili
 ## What the model delivers
 
 - **Probability of heart disease** for a specific patient (e.g. 78%)
-- **Binary diagnosis** — disease or no disease — based on an adjustable threshold
-- **Prediction explanation** — which clinical variables contributed most to that result, patient by patient
+- **Binary diagnosis**: disease or no disease, based on an adjustable threshold
+- **Prediction explanation**: which clinical variables contributed most to that result, patient by patient
 
 ## Results
 
@@ -77,7 +77,7 @@ All commands must be run from the **project root** (`heart-disease-predictor/`).
 
 ```bash
 make setup     # creates .venv and installs requirements.lock
-make notebook  # opens JupyterLab — train the model here first
+make notebook  # opens JupyterLab, train the model here first
 make api       # starts the FastAPI server at localhost:8000
 make app       # starts the Streamlit interface at localhost:8501
 make docker    # builds and runs the Docker image
@@ -126,7 +126,7 @@ make app
 .venv\Scripts\streamlit run app/app.py
 ```
 
-Opens at `http://localhost:8501` — patient data form with probability result and visual gauge.
+Opens at `http://localhost:8501`, patient data form with probability result and visual gauge.
 
 **3. FastAPI**
 
