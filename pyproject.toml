@@ -1,0 +1,42 @@
+[build-system]
+requires      = ["setuptools>=72"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name        = "projeto-doenca-cardiaca"
+version     = "1.0.0"
+description = "Previsão de doença cardíaca com MLP (PyTorch), SHAP e FastAPI"
+requires-python = ">=3.11"
+
+# Dependências do núcleo do projeto (notebook + treinamento)
+dependencies = [
+    "torch==2.3.1",
+    "numpy==2.0.1",
+    "pandas==2.2.2",
+    "scikit-learn==1.5.1",
+    "matplotlib==3.9.1",
+    "seaborn==0.13.2",
+    "shap==0.45.1",
+]
+
+[project.optional-dependencies]
+# Serving via FastAPI
+api = [
+    "fastapi==0.111.1",
+    "uvicorn[standard]==0.30.1",
+    "pydantic==2.8.2",
+]
+
+# Interface Streamlit
+app = [
+    "streamlit==1.36.0",
+    "matplotlib==3.9.1",   # já no core, explicitado por clareza
+]
+
+# Tudo junto (desenvolvimento local)
+dev = [
+    "projeto-doenca-cardiaca[api,app]",
+    "pip-tools==7.4.1",
+    "ipykernel==6.29.5",
+    "jupyterlab==4.2.3",
+]

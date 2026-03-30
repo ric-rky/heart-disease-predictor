@@ -1,0 +1,22 @@
+# Virtual environment
+.venv/
+
+# Trained model artifacts
+models/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
+
+# Env files
+.env

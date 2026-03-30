@@ -1,0 +1,8 @@
+# Dependências do app Streamlit — versões fixadas.
+# Para o ambiente completo use: pip install -r ../requirements.lock
+# torch CPU-only (Windows): pip install torch==2.4.0 --index-url https://download.pytorch.org/whl/cpu
+streamlit==1.36.0
+torch==2.4.0
+numpy==2.0.1
+scikit-learn==1.5.1
+matplotlib==3.9.2

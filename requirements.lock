@@ -1,0 +1,75 @@
+# requirements.lock
+# -----------------
+# Dependências fixadas para reprodutibilidade exata do ambiente.
+#
+# COMO USAR:
+#   python -m venv .venv
+#   source .venv/bin/activate        # Linux/Mac
+#   # .venv\Scripts\activate         # Windows
+#   pip install -r requirements.lock
+#
+# COMO REGENERAR (após atualizar pyproject.toml):
+#   pip install pip-tools
+#   pip-compile pyproject.toml --extra dev --output-file requirements.lock
+#
+# Gerado em: 2024-07 | Atualizado: 2026-03 | Python 3.12 | plataforma: win_amd64
+
+# Núcleo
+# torch CPU-only (Windows): pip install torch==2.4.0 --index-url https://download.pytorch.org/whl/cpu
+torch==2.4.0
+numpy==2.0.1
+pandas==2.2.2
+scikit-learn==1.5.1
+matplotlib==3.9.2
+seaborn==0.13.2
+shap==0.46.0
+
+# API
+fastapi==0.111.1
+uvicorn[standard]==0.30.1
+pydantic==2.8.2
+
+# App
+streamlit==1.36.0
+
+# Dependências transitivas fixadas
+# (subconjunto relevante — regenerar com pip-compile para lista completa)
+anyio==4.4.0
+certifi==2024.7.4
+charset-normalizer==3.3.2
+click==8.1.7
+filelock==3.15.4
+fsspec==2024.6.1
+h11==0.14.0
+httptools==0.6.1
+idna==3.7
+jinja2==3.1.4
+joblib==1.4.2
+llvmlite==0.43.0
+markupsafe==2.1.5
+mpmath==1.3.0
+networkx==3.3
+numba==0.60.0
+packaging==24.1
+pillow==10.4.0
+protobuf==5.27.2
+pyarrow==17.0.0
+python-dateutil==2.9.0.post0
+python-dotenv==1.0.1
+pytz==2024.1
+pyyaml==6.0.1
+requests==2.32.3
+scipy==1.14.0
+six==1.16.0
+starlette==0.37.2
+sympy==1.13.1
+threadpoolctl==3.5.0
+toml==0.10.2
+toolz==0.12.1
+tqdm==4.66.4
+typing-extensions==4.12.2
+tzdata==2024.1
+urllib3==2.2.2
+watchdog==4.0.1
+watchfiles==0.22.0
+websockets==12.0
